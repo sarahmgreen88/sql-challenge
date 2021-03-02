@@ -7,24 +7,24 @@ DROP TABLE salaries;
 DROP TABLE titles;
 --Create department table
 CREATE TABLE department (
-	dept_number VARCHAR,
+	dept_number VARCHAR PRIMARY KEY NOT NULL,
 	dept_name VARCHAR
 );
 --Create department employee table
 CREATE TABLE dept_emp(
-	emp_number INT,
+	emp_number INT PRIMARY KEY NOT NULL,
 	dept_number VARCHAR
 );
 --Create department manager table
 CREATE TABLE dept_manager (
-	dept_number VARCHAR,
+	dept_number VARCHAR PRIMARY KEY NOT NULL,
 	emp_number INT
 );
 --Create employees table
 CREATE TABLE employees (
-	emp_number INT,
+	emp_number INT PRIMARY KEY NOT NULL,
 	emp_title_id VARCHAR,
-	birth_date VARCHAR,
+	birth_date DATE,
 	first_name VARCHAR,
 	last_name VARCHAR,
 	sex VARCHAR,
@@ -32,12 +32,12 @@ CREATE TABLE employees (
 );
 --Create salaries table
 CREATE TABLE salaries (
-	emp_number INT,
+	emp_number INT PRIMARY KEY NOT NULL,
 	salary INT
 );
 --Create titles table
 CREATE TABLE titles (
-	title_id VARCHAR,
+	title_id VARCHAR PRIMARY KEY NOT NULL,
 	title VARCHAR
 );
 SELECT * 
